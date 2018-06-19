@@ -20,6 +20,7 @@ target/
 .mine/
 logs/
 log/
+__pycache__/
 log.txt
 *.log
 dev.properties

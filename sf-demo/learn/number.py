@@ -28,9 +28,9 @@ class B(A):
 # type()不会认为子类是一种父类类型。
 # isinstance()会认为子类是一种父类类型。
 isinstance(A(), A)  # returns True
-type(A()) == A  # returns True
+print(type(A()) == A)  # returns True
 isinstance(B(), A)  # returns True
-type(B()) == A  # returns False
+print(type(B()) == A)  # returns False
 
 # & | ^ ~ << >>
 a = 60  # 60 = 0011 1100
@@ -54,22 +54,22 @@ a = 10
 b = 20
 
 # and or not
-if (a and b):
+if a and b:
     print("1 - 变量 a 和 b 都为 true")
 else:
     print("1 - 变量 a 和 b 有一个不为 true")
 
-if (a or b):
+if a or b:
     print("2 - 变量 a 和 b 都为 true，或其中一个变量为 true")
 else:
     print("2 - 变量 a 和 b 都不为 true")
 # 修改变量 a 的值
 a = 0
-if (a and b):
+if a and b:
     print("3 - 变量 a 和 b 都为 true")
 else:
     print("3 - 变量 a 和 b 有一个不为 true")
-if (a or b):
+if a or b:
     print("4 - 变量 a 和 b 都为 true，或其中一个变量为 true")
 else:
     print("4 - 变量 a 和 b 都不为 true")

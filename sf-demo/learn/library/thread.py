@@ -45,23 +45,24 @@ def print_time(thread_name, delay, counter):
         counter -= 1
 
 
-threadLock = threading.Lock()
-threads = []
+if __name__ == '__main__':
+    threadLock = threading.Lock()
+    threads = []
 
-# 创建新线程
-thread1 = first_thread(1, "Thread-1", 1)
-thread2 = first_thread(2, "Thread-2", 2)
+    # 创建新线程
+    thread1 = first_thread(1, "Thread-1", 1)
+    thread2 = first_thread(2, "Thread-2", 2)
 
-# 开启新线程
-thread1.start()
-thread2.start()
+    # 开启新线程
+    thread1.start()
+    thread2.start()
 
-# 添加线程到线程列表
-threads.append(thread1)
-threads.append(thread2)
+    # 添加线程到线程列表
+    threads.append(thread1)
+    threads.append(thread2)
 
-# 等待所有线程完成
-for t in threads:
-    t.join()
+    # 等待所有线程完成
+    for t in threads:
+        t.join()
 
-print("退出主线程")
+    print("退出主线程")

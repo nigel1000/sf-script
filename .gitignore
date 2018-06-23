@@ -9,6 +9,7 @@
 *.swp
 *.out
 target/
+venv/
 *.iml
 *.ipr
 *.iws

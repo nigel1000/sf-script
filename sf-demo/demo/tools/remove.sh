@@ -3,7 +3,7 @@
 # alias rm="sh /Users/Documents/script/git/remove.sh"
 
 # 定义文件夹目录.Trash
-TRASH_DIR="/Users/.Trash"
+TRASH_DIR="/Users/nijianfeng/.Trash"
 # 定义秒时间戳
 STAMP=`date +%s`
 TARGET_DIR=$TRASH_DIR/$STAMP/
@@ -18,7 +18,8 @@ for i in $*; do
             continue
         fi
 	fi
-	echo move "$i" to "$TARGET_DIR" >> "$RECORD_FILE"
+	echo "move $i to $TARGET_DIR >> $RECORD_FILE"
+    echo "move $i to $TARGET_DIR" >> "$RECORD_FILE"
     # 将输入的参数对应文件mv至.Trash目录
     mv "$i" "$TARGET_DIR"
 done
